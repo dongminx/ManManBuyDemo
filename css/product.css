@@ -1,0 +1,69 @@
+#product nav {
+  position: relative;
+}
+#product nav input {
+  border: 0;
+  width: 60px;
+  height: 28px;
+  border-radius: 8px;
+  position: absolute;
+  top: 3px;
+  right: 10px;
+}
+#product .productList ul li {
+  padding: 0 10px 20px 10px;
+  border-bottom: 1px solid #ccc;
+}
+#product .productList ul li a {
+  color: #000;
+}
+#product .productList ul li a .productImg {
+  float: left;
+}
+#product .productList ul li a .productText {
+  margin-left: 110px;
+}
+#product .productList ul li a .productText h5 {
+  height: 44px;
+  line-height: 22px;
+}
+#product .productList ul li a .productText p {
+  font-size: 18px;
+  color: red;
+}
+#product .productList ul li a .productText p small {
+  font-size: 12px;
+}
+#product .productList ul li a .other {
+  margin-left: 110px;
+}
+#product .productList ul li a .other span {
+  color: #666;
+  font-size: 12px;
+}
+#product .productList ul li a .other .comment {
+  float: right;
+  margin-right: 10px;
+}
+#product .page {
+  overflow: hidden;
+}
+#product .page span {
+  height: 33px;
+  text-align: center;
+  float: left;
+  width: 33.333%;
+  padding: 0px 20px;
+}
+#product .page span a {
+  height: 33px;
+  line-height: 33px;
+  display: block;
+  border-radius: 5px;
+  color: #000;
+  background-color: #ccc;
+}
+#product .page span select {
+  padding: 0 17px;
+  height: 30px;
+}

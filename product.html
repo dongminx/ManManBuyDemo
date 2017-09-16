@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>产品分类</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/headfoot.css">
+    <link rel="stylesheet" href="./css/product.css">
+</head>
+<style>
+    .disable {
+        cursor: not-allowed;
+    }
+</style>
+
+<body>
+    <!--header start-->
+    <header id="header">
+        <a href="javascript:;" class="logo" id="backtop">
+            <img src="./images/header_logo.png" alt="">
+        </a>
+        <a href="javascript:;" class="download">
+            <img src="./images/header_app.png" alt="">
+        </a>
+    </header>
+    <!--header end-->
+
+    <!--search start-->
+    <section id="search">
+        <form action="">
+            <input type="search" placeholder="请输入你想比价的商品">
+            <input type="button" value="搜索">
+        </form>
+    </section>
+    <!--search end-->
+
+    <!--product start-->
+    <section id="product">
+        <nav>
+            <ol class="breadcrumb">
+                <li><a href="./index.html">首页</a></li>
+                <li><a href="./category.html">全部分类</a></li>
+                <li class="active">电视</li>
+            </ol>
+            <input type="button" value="筛选">
+        </nav>
+        <div class="productList">
+            <ul>
+                <li>
+                    <a href="javascript:;">
+                        <div class="productImg">
+                            <img src="http://pro.zuyushop.com:8015/ProPic/20166/Thumb/Thumb_2016060015515937123.png" alt="乐视TV(Letv)S50 Air全配版2D 50英寸 全高清LED液晶电视" width="100" height="100">
+                        </div>
+                        <div class="productText">
+                            <h5>乐视TV(Letv)S50 Air全配版2D 50英寸 全高清LED液晶电视</h5>
+                            <p><small>￥</small>1999.00</p>
+                        </div>
+                        <div class="other">
+                            <span>报价(6)</span>
+                            <span class="comment">评论(2286)</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <div class="page">
+                <span>
+                    <a class="last" href="javascript:;">上一页</a>
+                </span>
+                <span>
+                    <select name="" id="">
+                        <option value="1">1</option>
+                        <option value="2">2</option>                        
+                    </select>
+                </span>
+                <span>
+                    <a class="next" href="javascript:;">下一页</a>
+                </span>
+            </div>
+        </div>
+    </section>
+    <!--product end-->
+
+    <!--footer start-->
+    <footer id="footer">
+        <div class="footer-top">
+            <a href="javascript:;">登录</a>
+            <a href="javascript:;">注册</a>
+            <a class="backtop" href="#backtop"><span class="glyphicon glyphicon-arrow-up"></span>返回顶部</a>
+        </div>
+        <div class="footer-bottom">
+            <p class="ad">
+                <a href="javascript:;">手机APP下载</a>
+                <a href="javascript:;">慢慢买手机版</a> --掌上比价平台
+            </p>
+            <p class="link">m.manmanbuy.com</p>
+        </div>
+    </footer>
+    <!--footer end-->
+
+    <script src="./js/handlebars-1.0.0.beta.6.js"></script>
+    <script src="./js/jquery-1.12.2.js"></script>
+    <script src="./js/product.js"></script>
+    <script src="./js/url.js"></script>
+    <script type="text/html" id="productList">
+        {{#each result}}
+        <li>
+            <a href="javascript:;">
+                <div class="productImg">
+                    {{{productImg}}}
+                </div>
+                <div class="productText">
+                    <h5>{{productName}}</h5>
+                    <p>{{productPrice}}</p>
+                </div>
+                <div class="other">
+                    <span>{{productQuote}}</span>
+                    <span class="comment">{{productCom}}</span>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+    </script>
+    <script type="text/html" id="pageTpl">
+        {{#each resule as value}}
+        <span>
+                    <a class=" {{#value.pageid<=1?'disable':''}}" href="javascript:;">上一页</a>
+                </span>
+        <span>
+                    <select name="" id="">
+                        <option value="1">1</option>
+                        <option value="2">2</option>                        
+                    </select>
+                </span>
+        <span>
+                    <a class="{{value.pageid >=value.pagetotil?'disable':''}}" href="javascript:;">下一页</a>
+                </span> {{/each}}
+    </script>
+</body>
+
+</html>

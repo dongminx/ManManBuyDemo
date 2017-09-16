@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>产品分类</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/headfoot.css">
+    <link rel="stylesheet" href="./css/category.css">
+</head>
+
+<body>
+    <!--header start-->
+    <header id="header">
+        <a href="javascript:;" class="logo" id="backtop">
+            <img src="./images/header_logo.png" alt="">
+        </a>
+        <a href="javascript:;" class="download">
+            <img src="./images/header_app.png" alt="">
+        </a>
+    </header>
+    <!--header end-->
+    <!--search start-->
+    <section id="search">
+        <form action="">
+            <input type="search" placeholder="请输入你想比价的商品">
+            <input type="button" value="搜索">
+        </form>
+    </section>
+    <!--search end-->
+
+
+    <div style="background-color:#f2f2f2; height:100%;">
+        <!--category start-->
+        <section id="category" class="clearfix">
+            <div class="category-title">
+                <ul class="category-ul">
+                    <li>
+                        <a href="#">大家电</a>
+                        <ul class="clearfix">
+                            <li><a href="#">热水器</a></li>
+                            <li><a href="#">热水器</a></li>
+                            <li><a href="#">热水器</a></li>
+                            <li><a href="#">热水器</a></li>
+                            <li><a href="#">热水器</a></li>
+                            <li><a href="#">热水器</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!--category end-->
+
+        <!--footer start-->
+        <footer id="footer">
+            <div class="footer-top">
+                <a href="javascript:;">登录</a>
+                <a href="javascript:;">注册</a>
+                <a class="backtop" href="#backtop"><span class="glyphicon glyphicon-arrow-up"></span>返回顶部</a>
+            </div>
+            <div class="footer-bottom">
+                <p class="ad">
+                    <a href="javascript:;">手机APP下载</a>
+                    <a href="javascript:;">慢慢买手机版</a> --掌上比价平台
+                </p>
+                <p class="link">m.manmanbuy.com</p>
+            </div>
+        </footer>
+        <!--footer end-->
+    </div>
+
+    <script src="./js/handlebars-1.0.0.beta.6.js"></script>
+    <script src="./js/jquery-1.12.2.js"></script>
+    <script src="./js/category.js"></script>
+    <script type="text/html" id="categoryTitle">
+        {{#each result}}
+        <li>
+            <a href="#" data-list-id={{titleId}}>{{title}}</a>
+            <ul class="clearfix">
+                <li><a href="#">热水器</a></li>
+                <li><a href="#">热水器</a></li>
+                <li><a href="#">热水器</a></li>
+                <li><a href="#">热水器</a></li>
+                <li><a href="#">热水器</a></li>
+                <li><a href="#">热水器</a></li>
+
+            </ul>
+        </li>
+        {{/each}}
+    </script>
+    <!--定义模板-->
+    <script type="text/html" id="categoryList">
+        {{#each result}}
+        <li><a href="./product.html?categoryid={{categoryId}}&pageid=1">{{category}}</a></li>
+        {{/each}}
+    </script>
+</body>
+
+</html>
